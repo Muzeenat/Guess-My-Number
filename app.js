@@ -4,7 +4,8 @@ let inpOfGuess = document.querySelector(".guess");
 let checkBtn = document.querySelector(".btn-checker");
 let message = document.querySelector(".message");
 let number = document.querySelector(".number");
-let score = document.querySelector(".score")
+let score = document.querySelector(".score");
+let refreshBtn = document.querySelector(".refresh-btn")
 
 function gamer(e) {
     e.preventDefault();
@@ -38,3 +39,8 @@ if (score.textContent < 1) {
 }
 }
   checkBtn.addEventListener("click", gamer);
+
+  function refreshGame() {
+    location.reload();
+  }
+  refreshBtn.addEventListener("click", refreshGame)
